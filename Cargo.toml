@@ -1,0 +1,20 @@
+[package]
+name = "wiz-app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dioxus = { version = "0.5", features = ["desktop", "router"] }
+
+# Debug
+log = "0.4.19"
+dioxus-logger = "0.4.1"
+dioxus-free-icons = { version = "0.8.3", features = ["font-awesome-solid", "hero-icons-solid"] }
+serde = "1.0.198"
+reqwest = { version = "0.12.4", features = ["json"] }
+
+# Other Dependenceis
+[dependencies.wiz-bulb]
+path="../wiz-bulb"
