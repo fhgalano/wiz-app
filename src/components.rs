@@ -42,7 +42,7 @@ pub fn SideMenu() -> Element {
                     }
                 },
                 tooltip: "Bulb Discovery️".to_string(),
-                route: Route::PageNotFound{ route: vec![] }
+                route: Route::Discover {}
             }
         }
     }

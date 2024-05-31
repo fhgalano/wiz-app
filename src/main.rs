@@ -11,7 +11,7 @@ use log::LevelFilter;
 
 use wiz_bulb::bulb::Bulb;
 
-use pages::{Home, PageNotFound};
+use pages::{Home, PageNotFound, Discover};
 
 pub static BASE_URL: &str = "http://localhost:3000/";
 
@@ -20,6 +20,8 @@ pub static BASE_URL: &str = "http://localhost:3000/";
 enum Route {
     #[route("/")]
     Home {},
+    #[route("/discover")]
+    Discover {},
     #[route("/:..route")]
     PageNotFound { route: Vec<String> },
 }
