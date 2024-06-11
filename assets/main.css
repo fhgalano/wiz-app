@@ -146,6 +146,14 @@ body {
     align-self: center;
 }
 
+.add-bulb {
+
+}
+
+.add-bulb-popup {
+    background-color: var(--primary-5)
+}
+
 #footer {
     display: block;
     flex: 90%;
