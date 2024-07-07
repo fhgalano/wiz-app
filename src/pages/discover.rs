@@ -72,13 +72,11 @@ fn UnknownBulb(ip: String) -> Element {
                     icon: FaPlus,
                 }
             }
-            if *form_display.read() == "visible" {
-                AddBulbForm { 
-                    ip: ip, 
-                    form_display: form_display,
-                    name: name,
-                    id: id,
-                }
+            AddBulbForm { 
+                ip: ip, 
+                form_display: form_display,
+                name: name,
+                id: id,
             }
         }
     }

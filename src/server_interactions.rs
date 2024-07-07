@@ -24,3 +24,10 @@ pub async fn discover_bulbs() -> Result<Vec<Ipv4Addr>, reqwest::Error> {
     let url = format!("{}{}", BASE_URL, "bulb/discover");
     reqwest::get(url).await?.json().await
 }
+
+pub async fn add_bulb(bulb: &Bulb) -> Result<(), reqwest::Error> {
+    let url = format!("{}{}", BASE_URL, "bulb");
+    let c = reqwest::Client::new();
+    c.post(url).json(bulb).send().await?;
+    Ok(())
+}

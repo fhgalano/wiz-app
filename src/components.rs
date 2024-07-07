@@ -52,7 +52,7 @@ pub fn SideMenu() -> Element {
 pub fn BulbCard() -> Element {
     let mut a = use_signal(move || 0);
     let mut cb = use_resource(move || async move {
-        &a();
+        let _ = a();
         get_bulb("test_bulb_1".to_string()).await
     });
 
